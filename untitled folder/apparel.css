@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+}
+.logo{
+    padding: 1.5rem 0 0 1.5rem;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column-reverse;
+}
+main h1{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: hsl(0, 6%, 24%);
+}
+main h1 span{
+    color:  hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+main article:first-child p{
+    color: hsl(0, 36%, 70%);
+    line-height: 1.6;
+}
+
+main article .logo{
+    display: none;
+}
+
+main article picture img{
+    width: 100%;
+    margin: 2rem 0;
+}
+
+form{
+    position: relative;
+}
+form input{
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid hsl(0, 6%, 24%);
+    border-radius: 30px;
+    width: 100%;
+    margin: 2rem 0 0;
+    color: hsl(0, 6%, 24%) ;
+}
+form input::placeholder{
+    color: hsl(0, 6%, 24%);
+}
+form button{
+    position: absolute;
+    top: 42%;
+    right: -0.5rem;
+    transform: translate(-5%);
+    background-image: linear-gradient(135deg, hsl(0, 60%, 66%), hsl(0, 74%, 74%));
+    border: none;
+    border-radius: 90px;
+    padding: 0.8rem 1rem;
+    cursor: pointer;   
+}
+
+form button:hover{
+    background-image: linear-gradient(135deg, hsl(0, 90%, 96%), hsl(0, 80%, 86%));
+}
+.error{
+    color:  hsl(0, 93%, 68%) !important;
+    text-align: left;
+    margin: 0.5rem;
+    display: none;
+}
+
+@media(min-width: 768px){
+    body{
+        background: url("bg.svg") no-repeat center/cover;
+    }
+    main{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    main article{
+        flex: -1;
+    }
+    main article picture img{
+        margin-top: -4rem;
+    }
+    main article:first-child{
+        text-align: left;
+    }
+    .logo{
+        display: block;
+    }
+    main h1{
+        font-size: 4rem;
+        width: 500px;
+    }
+    main article:first-child p{
+        width: 500px;
+    }
+    form input{
+        width: 300px;
+    }
+    form button{
+        right: 197px;
+    }
+    .error{
+        margin-top: 10px;
+    }
+}
